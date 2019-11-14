@@ -38,13 +38,11 @@ if [[ ! -d $WORKSPACE/anaconda ]]; then
 
     mkdir -p $WORKSPACE/anaconda/conda-bld/$tag-64
 
-
     # step 2: setup channels
     conda config --system --add channels defaults
     conda config --system --add channels r
     conda config --system --add channels bioconda
     conda config --system --add channels conda-forge
-
 
     # step 3: install Samplot requirements
     conda install -y --file requirements.txt
